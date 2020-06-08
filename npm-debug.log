@@ -1,0 +1,70 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'cache', 'clean' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly ls normalized .
+5 silly gentlyRm /home/shoaib/.npm/_cacache is being purged
+6 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/_cacache
+7 silly gentlyRm /home/shoaib/.npm/_locks is being purged
+8 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/_locks
+9 silly gentlyRm /home/shoaib/.npm/anonymous-cli-metrics.json is being purged
+10 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/anonymous-cli-metrics.json
+11 silly gentlyRm /home/shoaib/.npm/ansi-styles is being purged
+12 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/ansi-styles
+13 silly gentlyRm /home/shoaib/.npm/chalk is being purged
+14 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/chalk
+15 silly gentlyRm /home/shoaib/.npm/has-flag is being purged
+16 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/has-flag
+17 silly gentlyRm /home/shoaib/.npm/npm is being purged
+18 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/npm
+19 silly gentlyRm /home/shoaib/.npm/postcss is being purged
+20 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/postcss
+21 silly gentlyRm /home/shoaib/.npm/registry.npmjs.org is being purged
+22 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/registry.npmjs.org
+23 silly gentlyRm /home/shoaib/.npm/source-map is being purged
+24 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/source-map
+25 silly gentlyRm /home/shoaib/.npm/supports-color is being purged
+26 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/supports-color
+27 silly gentlyRm /home/shoaib/.npm/zmq is being purged
+28 verbose gentlyRm don't care about contents; nuking /home/shoaib/.npm/zmq
+29 silly vacuum-fs purging /home/shoaib/.npm/_cacache
+30 silly vacuum-fs purging /home/shoaib/.npm/_locks
+31 silly vacuum-fs purging /home/shoaib/.npm/anonymous-cli-metrics.json
+32 silly vacuum-fs purging /home/shoaib/.npm/ansi-styles
+33 silly vacuum-fs purging /home/shoaib/.npm/chalk
+34 silly vacuum-fs purging /home/shoaib/.npm/has-flag
+35 silly vacuum-fs purging /home/shoaib/.npm/npm
+36 silly vacuum-fs purging /home/shoaib/.npm/postcss
+37 silly vacuum-fs purging /home/shoaib/.npm/registry.npmjs.org
+38 silly vacuum-fs purging /home/shoaib/.npm/source-map
+39 silly vacuum-fs purging /home/shoaib/.npm/supports-color
+40 silly vacuum-fs purging /home/shoaib/.npm/zmq
+41 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+42 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+43 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+44 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+45 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+46 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+47 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+48 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+49 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+50 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+51 silly vacuum-fs quitting because other entries in /home/shoaib/.npm
+52 verbose stack Error: EACCES: permission denied, rmdir '/home/shoaib/.npm/_cacache/content-v2'
+53 verbose cwd /home/shoaib/Documents/people-counter-app
+54 error Linux 5.3.0-53-generic
+55 error argv "/usr/bin/node" "/usr/bin/npm" "cache" "clean"
+56 error node v8.10.0
+57 error npm  v3.5.2
+58 error path /home/shoaib/.npm/_cacache/content-v2
+59 error code EACCES
+60 error errno -13
+61 error syscall rmdir
+62 error Error: EACCES: permission denied, rmdir '/home/shoaib/.npm/_cacache/content-v2'
+62 error  { Error: EACCES: permission denied, rmdir '/home/shoaib/.npm/_cacache/content-v2'
+62 error   errno: -13,
+62 error   code: 'EACCES',
+62 error   syscall: 'rmdir',
+62 error   path: '/home/shoaib/.npm/_cacache/content-v2' }
+63 error Please try running this command again as root/Administrator.
+64 verbose exit [ -13, true ]
