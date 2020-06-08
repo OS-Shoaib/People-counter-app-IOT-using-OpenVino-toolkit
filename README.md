@@ -1,0 +1,2 @@
+# People-counter-app-IOT-using-OpenVino-toolkit
+The people counter application is a smart video IoT solution that can detect people in a designated area of observation,  providing the number of people in the frame, average duration of people in frame,   total count of people since the start of the observation session and an alarm that sends an alert to the   UI telling the user when a person enters the video frame.
