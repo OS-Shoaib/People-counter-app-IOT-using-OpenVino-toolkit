@@ -100,6 +100,8 @@ def infer_on_stream(args, client):
     request_id = 0
     total_count = 0
     last_count = 0
+    frame_num = 0
+    frame_buffer = 0
 
     # Load the model through `infer_network`
     infer_network.load_model(args.model, args.device, request_id, args.cpu_extension)
@@ -165,21 +167,26 @@ def infer_on_stream(args, client):
 
             # Calculate and send relevant information on
             if counter > last_count:
-                start_time = time.time()
-                # current_count, total_count and duration to the MQTT server
-                total_count = total_count + counter - last_count
-                # Topic "person": keys of "count" and "total"
-                client.publish("person", json.dumps({"total": total_count}))
+                if frame_num - frame_buffer > 4:
+                    start_time = time.time()
+                    # current_count, total_count and duration to the MQTT server
+                    total_count = total_count + counter - last_count
+                    # Topic "person": keys of "count" and "total"
+                    client.publish("person", json.dumps({"total": total_count}))
 
+                    frame_buffer = frame_num
+                else:
+                    continue
             # Topic "person/duration": key of "duration"
             if counter < last_count:
                 duration = int(time.time() - start_time)
                 # Publish messages to the MQTT server
-                # Publish messages to the MQTT server
                 client.publish("person/duration", json.dumps({"duration": duration}))
 
-            client.publish("person", json.dumps({"count": counter, "total": total_count}))
+            client.publish("person", json.dumps({"count": counter}))
             last_count = counter
+
+            frame_num += 1
 
             # Break if escape key pressed
             if key_pressed == 27:
