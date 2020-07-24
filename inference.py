@@ -62,7 +62,7 @@ class Network:
         # Plugin initialization for specified device
         if not plugin:
             log.info("Initializing plugin for {} device...".format(device))
-            self.plugin = IECore()
+            self.plugin = IEPlugin(device=device)
         else:
             self.plugin = plugin
 
